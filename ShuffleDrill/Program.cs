@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -9,6 +10,10 @@ using System.Text;
 namespace ShuffleDrill {
 	class Program {
 		static void Main(string[] args) {
+			//TestEncoding();
+			Fisher_Yates_shuffle();
+		}
+		static void Fisher_Yates_shuffle() {
 			Console.Title="Fisher-Yates shuffle";
 			string[] a = HowManyPacks();// { "a","b","c","d","e","a","b","c","f","g","a" };
 			Print(a);
@@ -19,12 +24,22 @@ namespace ShuffleDrill {
 			}
 			Print(a);
 		}
-		static string[] HowManyPacks() {
+		static void TestEncoding() {
+			Console.OutputEncoding=Encoding.UTF8;
+			for(var i = 0;i<=1000;i++) {
+				Console.Write(Strings.ChrW(i));
+				if(i%50==0) { // break every 50 chars
+					Console.WriteLine();
+				}
+			}
+			Console.ReadKey();
+		}
+	static string[] HowManyPacks() {
 			Dictionary<string,int> packs = new Dictionary<string,int>();
 			packs.Add("塩",6);
 			packs.Add("醤油",4);
 			packs.Add("豚骨",2);
-			packs.Add("うどん",5);
+			packs.Add("うどん",6);
 			packs.Add("鶏",5);
 			packs.Add("沖縄",3);
 			packs.Add("そば",2);
@@ -54,11 +69,12 @@ namespace ShuffleDrill {
 			}
 		}
 		private static void Print(string[] a) {
+			CultureInfo ci = new CultureInfo("ja-JP");
 			for(int i = 0;i<a.Length;++i) {
 				if(i>0) {
 					ConsoleWrite(",");
 				}
-				ConsoleWrite("{0}",a[i]);
+				ConsoleWrite("{0}",String.Format(ci,a[i]));
 			}
 			ConsoleWriteLine("");
 		}
