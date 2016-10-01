@@ -10,11 +10,14 @@ using System.Text;
 namespace ShuffleDrill {
 	class Program {
 		static void Main(string[] args) {
-			//TestEncoding();
+			Console.WriteLine("日本語あきまへんか？\nあきまへん。");
+			Console.ForegroundColor=ConsoleColor.Yellow;
+			Console.WriteLine("\nIt was because of the font in the command prompt which must be of Raster Fonts, instead of MS Gothic and as well as Language for non-Unicode programs must be Japanese (Japan) in Region Settings.\n");
+			Console.ResetColor();
 			Fisher_Yates_shuffle();
 		}
 		static void Fisher_Yates_shuffle() {
-			Console.Title="Fisher-Yates shuffle";
+			Console.Title="Fisher-Yates shuffle as of 27SEP2016";
 			string[] a = HowManyPacks();// { "a","b","c","d","e","a","b","c","f","g","a" };
 			Print(a);
 			for(int i = 0;i<a.Length-2;++i) {
@@ -25,7 +28,7 @@ namespace ShuffleDrill {
 			Print(a);
 		}
 		static void TestEncoding() {
-			Console.OutputEncoding=Encoding.UTF8;
+			Console.OutputEncoding=Encoding.Default;
 			for(var i = 0;i<=1000;i++) {
 				Console.Write(Strings.ChrW(i));
 				if(i%50==0) { // break every 50 chars
@@ -36,11 +39,11 @@ namespace ShuffleDrill {
 		}
 	static string[] HowManyPacks() {
 			Dictionary<string,int> packs = new Dictionary<string,int>();
-			packs.Add("塩",6);
-			packs.Add("醤油",4);
+			packs.Add("塩",5);
+			packs.Add("醤油",3);
 			packs.Add("豚骨",2);
 			packs.Add("うどん",6);
-			packs.Add("鶏",5);
+			packs.Add("鶏",4);
 			packs.Add("沖縄",3);
 			packs.Add("そば",2);
 			packs.Add("味噌",2);
@@ -92,9 +95,13 @@ namespace ShuffleDrill {
 			Random r = new Random();
 			int j = r.Next();
 			while(!(i<=j&&j<length)) {
+				DoEvents();
 				j=r.Next();
 			}
 			return j;
+		}
+		private static void DoEvents() {
+			//System.Windows.Forms.Application.DoEvents();
 		}
 		private static void Exchange(ref string v1,ref string v2) {
 			string v3 = v1;
