@@ -29,7 +29,6 @@ namespace ShuffleDrill {
 			Knuth_shuffle(a);
 			WriteToFile(a);
 			Print(a);
-			Zip
 		}
 		static void Fisher_Yates_shuffle(string[] a) {
 			Console.Title="Fisher-Yates shuffles as of 27SEP2016";

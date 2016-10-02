@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuffleDrill", "ShuffleDril
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrillZipMethod", "DrillZipMethod\DrillZipMethod.csproj", "{35D454AE-7060-4420-8F83-AE90892B4CE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrillDaihatsuPerDiv", "DrillDaihatsuPerDiv\DrillDaihatsuPerDiv.csproj", "{8F8F11CD-1D37-418D-A808-207A59F6049F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaihatsuPerDiv", "DaihatsuPerDiv\DaihatsuPerDiv.csproj", "{4B5EEC2B-E065-460D-A004-2C865E26A99F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{35D454AE-7060-4420-8F83-AE90892B4CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35D454AE-7060-4420-8F83-AE90892B4CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35D454AE-7060-4420-8F83-AE90892B4CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8F11CD-1D37-418D-A808-207A59F6049F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8F11CD-1D37-418D-A808-207A59F6049F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8F11CD-1D37-418D-A808-207A59F6049F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8F11CD-1D37-418D-A808-207A59F6049F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5EEC2B-E065-460D-A004-2C865E26A99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5EEC2B-E065-460D-A004-2C865E26A99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5EEC2B-E065-460D-A004-2C865E26A99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5EEC2B-E065-460D-A004-2C865E26A99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
